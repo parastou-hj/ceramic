@@ -15,72 +15,130 @@
 });
  
  
- $(document).ready(function(){
-            var articlesCarousel = $('.baner-owl').owlCarousel({
-                rtl: true,
-                loop: true,
-                
-                nav: false,
-                dots: false,
-                // center: true,
-                autoplay: true,
-                autoplayTimeout: 5000,
-                autoplayHoverPause: true,
-                smartSpeed: 1000,
-       
-               
-                responsive: {
-                    0: {
-                        items: 1,
-                        
-                    },
-                     1200: {
-                        items: 1,
+$(document).ready(function(){
+    var bannerCarousel = $('.baner-owl').owlCarousel({
+        rtl: true,
+        // loop: true,
+        nav: false,
+         navText: [
+                        '<i class="fa-solid fa-chevron-right"></i>',
+                        '<i class="fa-solid fa-chevron-left"></i>'
+                    ],
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        smartSpeed: 1000,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        responsive: {
+            0: {
+                items: 1,
+            },
+            1200: {
+                items: 1,
                 dots: true,
-
-                        
-                    },
-                    
-                  
-                }
+                nav:true
+            },
+        },
+        onInitialized: function(event) {
+            
+            $('.owl-item.active .baner-txt p').css({
+                'opacity': '0',
+                'transform': 'translateY(30px)'
             });
-            
-            
-         
-        });
-         $(document).ready(function(){
-            var articlesCarousel = $('.mobile-baner-owl').owlCarousel({
-                rtl: true,
-                loop: true,
-                
-                nav: false,
-                dots: false,
-                // center: true,
-                autoplay: true,
-                autoplayTimeout: 5000,
-                autoplayHoverPause: true,
-                smartSpeed: 1000,
-       
-               
-                responsive: {
-                    0: {
-                        items: 1,
-                        
-                    },
-                     1200: {
-                        items: 1,
+            setTimeout(function() {
+                $('.owl-item.active .baner-txt p:first-child').css({
+                    'animation': 'fadeInScale 1s ease-out forwards'
+                });
+            }, 300);
+            setTimeout(function() {
+                $('.owl-item.active .baner-txt p:nth-child(2)').css({
+                    'animation': 'fadeInUp 1s ease-out forwards'
+                });
+            }, 700);
+        },
+        onTranslate: function(event) {
+           
+            $('.baner-txt p').css({
+                'opacity': '0',
+                'transform': 'translateY(30px)',
+                'animation': 'none'
+            });
+        },
+        onTranslated: function(event) {
+           
+            setTimeout(function() {
+                $('.owl-item.active .baner-txt p:first-child').css({
+                    'animation': 'fadeInScale 1s ease-out forwards'
+                });
+            }, 100);
+            setTimeout(function() {
+                $('.owl-item.active .baner-txt p:nth-child(2)').css({
+                    'animation': 'fadeInUp 1s ease-out forwards'
+                });
+            }, 500);
+        }
+    });
+});
+      $(document).ready(function(){
+    var mobileBannerCarousel = $('.mobile-baner-owl').owlCarousel({
+        rtl: true,
+        loop: true,
+        nav: false,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        smartSpeed: 1000,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        responsive: {
+            0: {
+                items: 1,
+            },
+            1200: {
+                items: 1,
                 dots: true,
-
-                        
-                    },
-                    
-                  
-                }
+            },
+        },
+        onInitialized: function(event) {
+            $('.owl-item.active .baner-txt p').css({
+                'opacity': '0',
+                'transform': 'translateY(30px)'
             });
-            
-            
-         
-        });
+            setTimeout(function() {
+                $('.owl-item.active .baner-txt p:first-child').css({
+                    'animation': 'fadeInScale 1s ease-out forwards'
+                });
+            }, 300);
+            setTimeout(function() {
+                $('.owl-item.active .baner-txt p:nth-child(2)').css({
+                    'animation': 'fadeInUp 1s ease-out forwards'
+                });
+            }, 700);
+        },
+        onTranslate: function(event) {
+            $('.baner-txt p').css({
+                'opacity': '0',
+                'transform': 'translateY(30px)',
+                'animation': 'none'
+            });
+        },
+        onTranslated: function(event) {
+            setTimeout(function() {
+                $('.owl-item.active .baner-txt p:first-child').css({
+                    'animation': 'fadeInScale 1s ease-out forwards'
+                });
+            }, 100);
+            setTimeout(function() {
+                $('.owl-item.active .baner-txt p:nth-child(2)').css({
+                    'animation': 'fadeInUp 1s ease-out forwards'
+                });
+            }, 500);
+        }
+    });
+});
          $(document).ready(function(){
             var articlesCarousel = $('.baner-mobile-owl').owlCarousel({
                 rtl: true,
@@ -160,7 +218,7 @@
                 loop: true,
                 
                 nav: false,
-                dots: true,
+                dots: false,
                 // center: true,
                 // autoplay: true,
                 autoplayTimeout: 5000,
@@ -172,7 +230,11 @@
                
                 responsive: {
                     0: {
-                        items: 1,
+                        items: 1.3,
+                        
+                    },
+                      576: {
+                        items: 2.3,
                         
                     },
                      1200: {
@@ -382,3 +444,111 @@ $(document).ready(function() {
   });
   
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const searchIcon = document.querySelector('.search');
+    const searchBox = document.querySelector('.search-box-wrapper');
+    const closeSearchBtn = document.getElementById('closeSearch');
+    const searchInput = document.getElementById('searchInput');
+    
+   
+    if (searchIcon) {
+        searchIcon.addEventListener('click', function(e) {
+            e.preventDefault();
+            searchBox.classList.add('active');
+             $('.search-overlay').addClass('active');
+            
+            // Focus on input after animation
+            setTimeout(() => {
+                searchInput.focus();
+            }, 400);
+        });
+    }
+    
+
+    if (closeSearchBtn) {
+        closeSearchBtn.addEventListener('click', function() {
+            searchBox.classList.remove('active');
+             $('.search-overlay').removeClass('active');
+        });
+    }
+    
+  
+    
+
+    document.addEventListener('click', function(e) {
+        if (!searchBox.contains(e.target) && !searchIcon.contains(e.target)) {
+            searchBox.classList.remove('active');
+             $('.search-overlay').removeClass('active');
+        }
+    });
+    
+ 
+    searchBox.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+    });
+
+
+    // ==================== Product Gallery Scroll Animation ====================
+$(document).ready(function() {
+    
+    // Intersection Observer برای تشخیص ورود به viewport
+    const observerOptions = {
+        threshold: 0.2, // وقتی 20% از المنت دیده شد
+        rootMargin: '0px 0px -100px 0px' // شروع انیمیشن کمی زودتر
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // اضافه کردن کلاس برای شروع انیمیشن
+                $(entry.target).addClass('animate-in');
+                
+                // بعد از انیمیشن، افکت‌های اضافی
+                setTimeout(() => {
+                    $(entry.target).find('.item').css({
+                        'transition': 'transform 0.3s ease, box-shadow 0.3s ease'
+                    });
+                }, 1500);
+                
+                // فقط یکبار اجرا شود
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    // اعمال observer به product-gallery
+    const galleryElement = document.querySelector('.product-gallery');
+    if (galleryElement) {
+        observer.observe(galleryElement);
+    }
+    
+    // انیمیشن اضافی برای آیتم‌ها هنگام کلیک
+    $('.product-gallery .item').on('click', function() {
+        $(this).css({
+            'animation': 'pulse 0.5s ease-in-out'
+        });
+        
+        setTimeout(() => {
+            $(this).css({
+                'animation': ''
+            });
+        }, 500);
+    });
+});
+
+// انیمیشن pulse برای کلیک
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes pulse {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(0.95);
+        }
+    }
+`;
+document.head.appendChild(style);

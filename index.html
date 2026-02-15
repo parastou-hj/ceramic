@@ -15,24 +15,25 @@
         <div class="container-fluid px-0 ">
             <div class="row top-header ">
                 <div class="row col-xl-11 py-2">
-                    <div class="col-lg-6">
-                    <p>
+                    <div class="col-sm-6 d-flex align-items-center">
+                    <p class="top-txt">
                         کیفیتی که انتظارش را داشتید با قیمتی که باور نخواهید کرد.
                     </p>
                 </div>
-                <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end mt-2 mt-lg-0">
+                <div class="col-sm-6 d-flex justify-content-center justify-content-sm-end mt-2 mt-lg-0 align-items-center">
                     <div class="tel">
                         <a href="">
                              6200 73 66 021
                         </a>
                     </div>
-                    <span class="d-lg-none px-3">|</span>
+                    <span class="tel-sep px-3">|</span>
                      <div class="tel">
                         <a href="">
                              6200 73 66 021
                         </a>
                         <img src="/images/header-tel.png" alt="">
                     </div>
+                    <span class="d-none d-lg-block">|</span>
                     <div class="lang-switcher d-none d-lg-block">
   <a href="#" class="lang-trigger">
    <i class="fa-solid fa-chevron-down arrow-lang"></i>
@@ -48,12 +49,27 @@
                 </div>
                 </div>
             </div>
-            <div class="row col-xl-11 pb-2 pb-lg-0">
+          
+        </div>
+         </div>
+         <div class="container-fluid">
+            <div class="row col-xl-11 py-2 pb-lg-0 position-relative">
                 <div class="col-lg-2 col-1 d-flex align-items-center">
-                    <div class="logo d-flex">
+                    <div class="logo d-flex align-items-center">
                        <div class=" bar-menu justify-content-center align-items-center d-lg-none">
                 <i class="fa-solid fa-bars" ></i>
                        </div>
+                         <div class="lang-switcher d-lg-none">
+        <a href="#" class="lang-trigger">
+            <i class="fa-solid fa-chevron-down arrow-lang"></i>
+            <span class="current-lang">FA</span>
+            <img src="images/lang.png" alt="">
+        </a>
+        <ul class="lang-dropdown">
+            <li><a href="#" data-lang="fa" class="lang-option active">فارسی</a></li>
+            <li><a href="#" data-lang="en" class="lang-option">English</a></li>
+        </ul>
+    </div>
                         <a href="" class="d-none d-lg-block ">
                             <img src="/images/logo.png" alt="">
                         </a>
@@ -67,9 +83,7 @@
       <li>
         <a href="#">صفحه اصلی</a>
       </li>
-       <li>
-        <a href="#">درباره ما</a>
-      </li>
+      
 
       <li>
         <a href="#">محصولات <i class="arrow down"></i></a>
@@ -98,9 +112,18 @@
           <li><a href="#">دسته ۴</a></li>
         </ul>
       </li>
+        <li>
+        <a href="#"> کاتالوگ</a>
+      </li>
+        <li>
+        <a href="#"> خدمات پس از فروش</a>
+      </li>
+       <li>
+        <a href="#"> مقالات</a>
+      </li>
 
       <li>
-        <a href="#">خدمات<i class="arrow down"></i></a>
+        <a href="#">درباره ما<i class="arrow down"></i></a>
         <ul class="submenu">
           <li><a href="#">تاریخچه</a></li>
           <li><a href="#">تیم ما</a></li>
@@ -117,9 +140,7 @@
         </ul>
       </li>
 
-      <li>
-        <a href="#"> مقالات</a>
-      </li>
+     
 
       <li>
         <a href="#">تماس با ما</a>
@@ -133,35 +154,239 @@
   </div>
                
                 </div>
-                <div class="col-lg-3 pe-0 col-11 d-flex justify-content-lg-end justify-content-between align-items-center">
-                    <div class="search">
-                        <img src="/images/search.png" alt="" class="d-none d-lg-block">
-                    </div>
-                    <div class="user mx-lg-5">
-                        <img src="/images/user.png" alt="">
-                    </div>
-                    <div class="cart">
-                        <img src="/images/cart.png" alt="">
-                    </div>
-                    <div class="lang-switcher d-lg-none">
-  <a href="#" class="lang-trigger">
-   <i class="fa-solid fa-chevron-down arrow-lang"></i>
-  <span class="current-lang">FA</span>
-    <img src="images/lang.png" alt="">
-  </a>
-  <ul class="lang-dropdown">
-    <li><a href="#" data-lang="fa" class="lang-option active">فارسی</a></li>
-    <li><a href="#" data-lang="en" class="lang-option">English</a></li>
-    <!-- <li><a href="#" data-lang="ar" class="lang-option">العربية</a></li> -->
-  </ul>
-</ی>
-                </div>
-                     <a href="" class=" d-lg-none mob-logo ">
-                            <img src="/images/logo.png" alt="">
-                        </a>
-                </div>
+              <div class="col-lg-3 pe-0 col-11 d-flex justify-content-lg-end justify-content-between align-items-center">
+    <div class="search">
+        <img src="/images/search.png" alt="" class="d-none d-lg-block">
+    </div>
+    
+    <!-- ========== User Dropdown - حالت لاگین نشده ========== -->
+    <div class="user-dropdown user-not-logged mx-lg-5">
+        <div class="user-trigger">
+            <img src="/images/user.png" alt="">
+        </div>
+        <div class="user-menu">
+            <div class="user-menu-header">
+                <i class="fa-solid fa-user"></i>
+                <span>ورود به حساب کاربری</span>
+            </div>
+            <div class="user-login-prompt">
+                <p>برای مشاهده پروفایل و سفارشات خود وارد شوید</p>
+                <a href="#" class="login-btn">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    <span>ورود / ثبت نام</span>
+                </a>
             </div>
         </div>
+    </div>
+    
+    <!-- ========== User Dropdown - حالت لاگین شده ) ========== -->
+    <div class="user-dropdown user-logged mx-lg-5" style="display: none;">
+        <div class="user-trigger">
+            <img src="/images/user.png" alt="">
+            <span class="user-name-badge">علی</span>
+        </div>
+        <div class="user-menu">
+            <div class="user-menu-header">
+                <i class="fa-solid fa-user-circle"></i>
+                <div class="user-info">
+                    <span class="user-greeting">سلام</span>
+                    <span class="user-fullname">علی احمدی</span>
+                </div>
+            </div>
+            <ul class="user-menu-list">
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-user-circle"></i>
+                        <span>پروفایل من</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-shopping-bag"></i>
+                        <span>سفارش‌های من</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>علاقه‌مندی‌ها</span>
+                        <span class="badge-count">5</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>آدرس‌های من</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-bell"></i>
+                        <span>اعلانات</span>
+                        <span class="badge-count">2</span>
+                    </a>
+                </li>
+                <li class="user-menu-divider"></li>
+                <li>
+                    <a href="#" class="logout-link">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>خروج از حساب</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- ========== Cart Dropdown - حالت خالی ========== -->
+    <div class="cart-dropdown cart-empty-state">
+        <div class="cart-trigger">
+            <img src="/images/cart.png" alt="">
+            <span class="cart-badge">0</span>
+        </div>
+        <div class="cart-menu">
+            <div class="cart-menu-header">
+                <i class="fa-solid fa-shopping-cart"></i>
+                <span>سبد خرید</span>
+                <span class="cart-count">0 محصول</span>
+            </div>
+            
+            <div class="cart-empty">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p class="empty-title">سبد خرید شما خالی است</p>
+                <p class="empty-text">برای خرید محصولات به فروشگاه بروید</p>
+                <a href="#" class="btn-shop-now">شروع خرید</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ========== Cart Dropdown - حالت پر  ========== -->
+    <div class="cart-dropdown cart-has-items" style="display: none;">
+        <div class="cart-trigger">
+            <img src="/images/cart.png" alt="">
+            <span class="cart-badge">3</span>
+        </div>
+        <div class="cart-menu">
+            <div class="cart-menu-header">
+                <i class="fa-solid fa-shopping-cart"></i>
+                <span>سبد خرید</span>
+                <span class="cart-count">3 محصول</span>
+            </div>
+            
+            <div class="cart-items">
+                
+                <div class="cart-item">
+                    <div class="cart-item-img">
+                        <img src="/images/pro-img.png" alt="">
+                    </div>
+                    <div class="cart-item-details">
+                        <h4>روشویی مدل A</h4>
+                        <p class="cart-item-price">۱,۲۵۰,۰۰۰ تومان</p>
+                        <div class="cart-item-qty">
+                            <button class="qty-btn minus">-</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                    </div>
+                    <button class="cart-item-remove">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                
+           
+                <div class="cart-item">
+                    <div class="cart-item-img">
+                        <img src="/images/pro-img2.png" alt="">
+                    </div>
+                    <div class="cart-item-details">
+                        <h4>توالت فرنگی مدل B</h4>
+                        <p class="cart-item-price">۲,۸۵۰,۰۰۰ تومان</p>
+                        <div class="cart-item-qty">
+                            <button class="qty-btn minus">-</button>
+                            <span class="qty-value">2</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                    </div>
+                    <button class="cart-item-remove">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                
+               
+                <div class="cart-item">
+                    <div class="cart-item-img">
+                        <img src="/images/pro-img3.png" alt="">
+                    </div>
+                    <div class="cart-item-details">
+                        <h4>شیر آلات مدل C</h4>
+                        <p class="cart-item-price">۹۵۰,۰۰۰ تومان</p>
+                        <div class="cart-item-qty">
+                            <button class="qty-btn minus">-</button>
+                            <span class="qty-value">1</span>
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                    </div>
+                    <button class="cart-item-remove">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>جمع کل:</span>
+                    <span class="total-price">۷,۹۰۰,۰۰۰ تومان</span>
+                </div>
+                <a href="#" class="cart-view-btn">مشاهده سبد خرید</a>
+                <a href="#" class="cart-checkout-btn">تسویه حساب</a>
+            </div>
+        </div>
+    </div>
+    
+  
+    <a href="" class=" d-lg-none mob-logo ">
+                            <img src="/images/logo.png" alt="">
+                        </a>
+</div>
+                     
+                </div>
+                
+
+            </div>
+            <div class="search-box-wrapper">
+                        <div class="search-box-container">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="search-box-content">
+                                            <button class="search-close-btn" id="closeSearch">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                            
+                                            <form class="search-form" action="" method="GET">
+                                                <div class="search-input-wrapper">
+                                                    <input 
+                                                        type="text" 
+                                                        class="search-input" 
+                                                        placeholder="دنبال چه محصولی می‌گردید؟"
+                                                        name="search"
+                                                        id="searchInput"
+                                                    >
+                                                    <button type="submit" class="search-submit-btn">
+                                                        <i class="fa fa-search"></i>
+                                                        جستجو
+                                                    </button>
+                                                </div>
+                                            </form>
+                                            
+                                         
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-overlay"></div>
+         </div>
          <!-- mobile-nav -->
 <div class="off-canvas">
   <div class="off-canvas-header d-flex justify-content-between">
@@ -360,6 +585,8 @@
     </div>
   </div>
 </div>
+
+
     </header>
     <main class="body-content">
       <!-- desktop-baner -->
@@ -432,9 +659,13 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid px-0 pro-sec pt-5">
-            <div class="row col-lg-10 d-flex justify-content-center">
-               <div class="pro-grid mx-auto">
+        <div class="container-fluid px-0 pro-sec pt-5 pb-5">
+            <div class="row col-lg-10 pb-5">
+              <div class="col-12 pro-sec-title text-center mb-4">
+                <h2>محصولات ما</h2>
+                <p class="mt-2">کیفیـت را تکـرار کــرده ایـم!</p>
+              </div>
+               <div class="pro-grid mx-auto ">
                 
                     <div class="pro-cart position-relative">
                         <img src="/images/pro-overlay.png" alt="" class="pro-overlay">
@@ -486,16 +717,16 @@
                </div>
             </div>
         </div>
-        <section class="container-fluid about-sec">
+        <section class="container-fluid about-sec ">
 
   <div class="row col-xl-11 about-wrapper">
      
-    <div class="about-content">
+    <div class="about-content ps-2">
 
-      <span class="sub">درباره ما</span>
+      <span class="sub mb-2">درباره ما</span>
 
-      <h2>
-        تجربه‌ای متفاوت از راحتی و پاکیزگی
+      <h2 class="mt-2">
+        تجربه‌ای متفاوت از راحتـی و پاکیـزگی
       </h2>
 
       <p>
@@ -606,7 +837,7 @@
   </div>
         <div class="row px-0 ">
           
-            <div class="col-12 ps-0 pe-5">
+            <div class="col-12 ps-0 pe-lg-5">
                 <div class="blog-owl owl-carousel owl-theme">
                     <div class="blog-card p-3  ">
                         <div class="blog-card-img">
@@ -675,7 +906,7 @@
     </section>
 
     </main>
-  <footer class="py-4">
+  <footer class="pt-4 pb-5">
         <div class="container-fluid px-0">
             <div class="row col-xl-11 py-3">
                <div class="footer-top">
@@ -710,7 +941,7 @@
                 </div>
                </div>
             </div>
-            <div class="row col-xl-11 footer-middle d-flex py-5 ">
+            <div class="row col-xl-11 footer-middle d-flex pt-5 pb-4 ">
                 <div class=" catalog ">
                     <img src="./images/catalog-back.png" alt="" class="catalg-back">
                     <img src="./images/footer-catalog.png" alt="" class="catalog-img">
@@ -722,12 +953,12 @@
                         <span>دید شما آینده ی شماست...</span>
                          </div>
                         <div class="txt-flesh">
-                            <img src="./images/catalog-flesh.png" alt="">
+                            <img src="./images/blog-flesh.png" alt="">
                         </div>
                        </div>
                     </div>
                 </div>
-                <div class="footer-nav d-flex">
+                <div class="footer-nav d-flex py-4">
                         <ul class="footer-list">
                             <li><a href="#">صفحه اصلی</a></li>
                             <li><a href="#">فروشگاه</a></li>
@@ -752,12 +983,12 @@
             </div>
             <div class="row col-xl-11 footer-rigths mt-3">
                 <div class="col-lg-11 col-12 rights-sec d-flex px-0 px-sm-2">
-                   <div class="rights d-flex justify-content-lg-between">
-                     <div>
-                      <span>© کلیه حقوق این سایت متعلق به شرکت <span class="company">Arm Group</span> می باشد</span>
+                   <div class="rights d-flex justify-content-lg-between px-5">
+                     <div class="d-flex align-items-center">
+                      <span>© کلیه حقوق این سایت متعلق به شرکت <span class="company">لامع </span> می باشد</span>
 
                     </div>
-                   <div>
+                   <div class="d-flex align-items-center">
                      <span class="eng-right">website designed by <span class="company">NONEGAR PARDAZESH</span>  </span>
                     <span> | developed by <span class="company">NONEGAR</span></span>
                    </div>
@@ -774,11 +1005,9 @@
             </div>
             <div class="fixed d-flex flex-column">
                 <a href="#">
-                    <img src="./images/fix-whats.png" alt="">
+                    <img src="./images/fix-wats.png" alt="">
                 </a>
-               <a href="#">
-                 <img src="./images/fix-chat.png" alt="">
-               </a>
+              
             </div>
         </div>
           <div class="toolbar d-xl-none d-lg-none">
@@ -790,15 +1019,15 @@
                 </a>
             </li>
             <li>
-                <a href="">
-                    <div class="icon-toolbar">
+                <div >
+                    <div class="icon-toolbar search">
            <i class="fas fa-search"></i>
 
 
                     </div>
 
-                    <div class="d-block lbl-menu">جستجو</div>
-                </a>
+                    <div class="d-block lbl-menu ">جستجو</div>
+                </div>
             </li>
             <li>
                 <a href="">
